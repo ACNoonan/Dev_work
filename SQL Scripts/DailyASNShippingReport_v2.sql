@@ -1,0 +1,14 @@
+SELECT
+  hb.CABBV
+  ,hb.SHPINV
+  ,hb.INVNO
+  ,hb.CPART
+  ,hb.QTYSHP
+  ,hb.F3WRBG
+  ,tb.PDATE
+FROM
+  aw.v_RSPSHPB hb
+INNER JOIN aw.v_RSPSHSTB tb
+ON tb.PARTNO = hb.PARTNO
+AND tb.SHPDTE = hb.SHPDTE
+ORDER BY hb.SHPDTE DESC
